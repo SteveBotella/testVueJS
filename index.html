@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <script src="https://unpkg.com/vue@next"></script>
     <script src="ressources/js/script.js" defer></script>
+    <link href="ressources/styles/styles.css" rel="stylesheet">
     <title>Title</title>
 </head>
 <body>
 <div class="ui-main-container" id="update">
-    <input type="text" v-model="updateH1">
-    <h1 id="update-h1" v-bind:style="{color: textColor}">
-        {{ updateH1 }}
+    <input type="text" v-model="h1">
+    <h1 :class="{classColor: isClassColorActive}">
+        {{ h1 }}
     </h1>
-    <input type="text" v-model="updateH2">
-    <h2 id="update-h2" v-bind:style="{color: textColor}">
-        {{ textH2 }}
+    <input type="text" v-model="h2Temp">
+    <h2 :class="{classColor: isClassColorActive}">
+        {{ h2 }}
     </h2>
-    <button id="btn-h2" v-on:click="clickH2">H2</button>
-    <input type="checkbox" id="checkbox-red" v-on:click="changeTextColor()" v-model="checked">
-    <input type="checkbox" id="checkbox-hide" v-model="checkedImg">
-    <img src="ressources/images/goku.png" v-if="checkedImg">
+    <button v-on:click="replaceH2Text">H2</button>
+    <input type="checkbox" v-model="isClassColorActive">
+    <input type="checkbox" v-model="isImageVisible">
+    <img src="ressources/images/goku.png" v-if="isImageVisible">
 </div>
 </body>
 </html>
