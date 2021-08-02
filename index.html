@@ -9,14 +9,16 @@
 <body>
 <div class="ui-main-container" id="app">
     <a v-bind:href="link">{{ message }}</a>
-    <ul>
+    <ul v-if="success">
         <li v-for="person in persons">{{ person }}</li>
     </ul>
-    <div class="ui-message-success" v-if="success">
-        <p>Message sent successfully</p>
+    <div class="ui-close-list">
+        <i class="close icon" v-on:click="close"> Ok </i>
+    </div><div class="ui-open-list" >
+        <i class="open icon" v-on:click="open"> Back </i>
     </div>
     <div class="ui-error-message" v-else>
-        <p>Message not sent</p>
+        <p>List closed</p>
     </div>
 </div>
 </body>
