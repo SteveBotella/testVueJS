@@ -2,11 +2,22 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0" defer></script>
     <script src="ressources/js/script.js" defer></script>
     <title>Title</title>
 </head>
 <body>
-
+<div class="ui-main-container" id="app">
+    <a v-bind:href="link">{{ message }}</a>
+    <ul>
+        <li v-for="person in persons">{{ person }}</li>
+    </ul>
+    <div class="ui-message-success" v-if="success">
+        <p>Message sent successfully</p>
+    </div>
+    <div class="ui-error-message" v-else>
+        <p>Message not sent</p>
+    </div>
+</div>
 </body>
 </html>
