@@ -11,6 +11,7 @@ new Vue({
             this.success = false
         },
         open: function () {
+            this.persons.push(this.message)
             this.success = true
         }
     }
