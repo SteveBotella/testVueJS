@@ -9,6 +9,7 @@
 <body>
 <div class="ui-main-container" id="app">
     <a v-bind:href="link">{{ message }}</a>
+    <input type="text" v-model="message">
     <ul v-if="success">
         <li v-for="person in persons">{{ person }}</li>
     </ul>
