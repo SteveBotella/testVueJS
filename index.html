@@ -2,25 +2,13 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0" defer></script>
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="ressources/js/script.js" defer></script>
     <title>Title</title>
 </head>
 <body>
-<div class="ui-main-container" id="app">
-    <a v-bind:href="link">{{ message }}</a>
-    <input type="text" v-model="message">
-    <ul v-if="success">
-        <li v-for="person in persons">{{ person }}</li>
-    </ul>
-    <div class="ui-close-list">
-        <i class="close icon" v-on:click="close"> Ok </i>
-    </div><div class="ui-open-list" >
-        <i class="open icon" v-on:click="open"> Back </i>
-    </div>
-    <div class="ui-error-message" v-else>
-        <p>List closed</p>
-    </div>
+<div class="ui-main-container" id="message">
+    Message : {{ message }}
 </div>
 </body>
 </html>
