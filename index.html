@@ -10,11 +10,11 @@
 <body>
 <div class="ui-main-container" id="update">
     <input type="text" v-model="h1">
-    <h1 :class="{classColor: isClassColorActive}">
+    <h1 :class="{red: isClassColorActive}">
         {{ h1 }}
     </h1>
     <input type="text" v-model="h2Temp">
-    <h2 :class="{classColor: isClassColorActive}">
+    <h2 :class="{red: isClassColorActive}">
         {{ h2 }}
     </h2>
     <button v-on:click="replaceH2Text">H2</button>
